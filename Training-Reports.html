@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Training Advisories</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  .dropdown {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+            width: 150px;
+            background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		.firstsection {
+			background-image: url("images/gr.jpg");
+			height: 250px;
+		}
+
+		.secondsection {
+			background-color:ivory ;
+			height: 1500px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			background-image: url("images/peakpx.jpg");
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
+			margin: auto;
+			border: 10px solid limegreen;
+			border-radius: 30px;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		.newspaper {
+ 				 column-count: 4;
+  				column-gap: 150px;
+  				column-rule: 4px;
+}
+
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="#">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="Training-Reports.html">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="manops.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="infographics.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="photo.html">Photos</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="">Monitoring</a>
+            <ul>
+                                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+
+                </li>
+            
+            </ul><!DOCTYPE html>
+
+			<html>
+			
+			<head>
+				<title>Training Advisories</title>
+			
+				<style>
+					* {
+						margin: 0;
+						padding: 0;
+					}
+					body {
+						margin: 0;
+						padding: 0;
+						background-color: ivory;
+					}
+					.navbar {
+						display: flex;
+						align-items: center;
+						justify-content: center;
+						position: sticky;
+						top: 0;
+						cursor: pointer;
+					}
+			
+					.background {
+						background: black;
+						background-blend-mode: darken;
+						background-size: cover;
+					}
+			
+					.nav-list {
+						width: 70%;
+						display: flex;
+						align-items: center;
+					}
+			
+					.logo {
+						display: flex;
+						justify-content: center;
+						align-items: center;
+					}
+			
+					.logo img {
+						width: 50px;
+						border-radius: 20px;
+					}
+			
+					.nav-list li {
+						list-style: none;
+						padding: 15px 20px;
+					}
+			
+					.nav-list li a {
+						text-decoration: none;
+						color: white;
+					}
+			
+					.nav-list li a:hover {
+						color: black;
+					}
+			  .dropdown {
+						margin: 0;
+						padding: 0px;
+						list-style: none;
+						width: 150px;
+						background-color: #000000;
+					}
+			
+					.dropdown li {
+						position: relative;
+					}
+			
+					.dropdown li a {
+						color: #ffffff;
+						text-align: center;
+						text-decoration: none;
+						display: block;
+						padding: 0px;
+					}
+			
+					.dropdown li ul {
+						position: absolute;
+						top: 100%;
+						margin: 0;
+						padding: 0;
+						list-style: none;
+						display: none;
+						line-height: normal;
+						background-color: black;
+					}
+			
+					.dropdown li ul li a {
+						text-align: left;
+						color: #cccccc;
+						font-size: 14px;
+						padding: 0px;
+						display: block;
+						white-space: nowrap;
+					}
+			
+					.dropdown li ul li a:hover {
+						background-color: #ffd700;
+						color: #ffffff;
+					}
+			
+					.dropdown li ul li ul {
+						left: 90%;
+						top: 0;
+					}
+			
+					ul li:hover>a {
+						background-color: #0abf53;
+						color: #ffffff !important;
+					}
+			
+					ul li:hover>ul {
+						display: block;
+					}
+					.rightnav {
+						width: 30%;
+						text-align: right;
+					}
+			
+					.firstsection {
+						background-image: url("images/gr.jpg");
+						height: 250px;
+						width: 100%;
+					}
+			
+					.secondsection {
+						background-color:ivory;
+						height: 1900px;
+						width: 1900px;
+					}
+			
+					.box-main {
+						display: flex;
+						justify-content: center;
+						align-items: left;
+						color: black;
+						max-width: 80%;
+						margin: auto;
+						height: 80%;
+					}
+			
+					.firsthalf {
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						justify-content: center;
+					}
+			
+					.secondhalf {
+						width: 30%;
+					}
+			
+					.secondhalf img {
+						width: 70%;
+						border: 4px solid white;
+						border-radius: 200px;
+						display: block;
+						margin: auto;
+					}
+			
+					.text-big {
+						font-family: 'Piazzolla', serif;
+						font-weight: bold;
+						font-size: 35px;
+					}
+					.text-xsmall {
+						font-size: 15px;
+					}
+					.text-small {
+						font-size: 25px;
+					}
+			
+					.btn {
+						padding: 8px 20px;
+						margin: 7px 0;
+						border: 2px solid white;
+						border-radius: 8px;
+						background: none;
+						color: white;
+						cursor: pointer;
+					}
+			
+					.btn-sm {
+						padding: 6px 10px;
+						vertical-align: middle;
+				
+					}
+			
+					.section-Left {
+						flex-direction: row-reverse;
+					}
+			
+					.paras {
+						padding: 0px 65px;
+					}
+			
+					.thumbnail img {
+						width: 80px;
+						border: 2px solid black;
+						border-radius: 26px;
+						margin-top: 5px;
+					}
+			
+					.center {
+						text-align: center;
+					}
+			
+					.text-footer {
+						text-align: center;
+						padding: 30px 0;
+						font-family: 'Ubuntu', sans-serif;
+						display: flex;
+						justify-content: center;
+						color: white;
+					}
+					.newspaper {
+							  column-count: 4;
+							  column-gap: 150px;
+							  column-rule: 4px;
+					}
+					section {
+						background-color: #FAE89A;
+						padding: 20px;
+						max-width:1300px;
+						margin: 0 auto;
+					}
+					.section-header {
+						font-size: 24px;
+						font-weight: bold;
+						margin-bottom: 20px;
+					}
+					table {
+						border: 5px solid #4CAF50;
+						border-collapse: collapse;
+						width: 100%;
+						margin: 0 auto; /* Center the table */
+					}
+			
+				   th {
+						background-color: #4CAF50; /* Green background color for the header */
+						color: white; /* Text color for the header */
+						padding: 8px;
+						text-align: center;
+					}
+			
+					td {
+						border: 0px solid black;
+						padding: 8px;
+						text-align: left;
+					}
+			
+					.pagination {
+						text-align: center; /* Center the pagination */
+					}
+			
+					.pagination button {
+						background-color: #4CAF50; /* Green background color */
+						color: white;
+						padding: 10px 15px;
+						border: none;
+						border-radius: 5px;
+						cursor: pointer;
+						margin: 0 5px; /* Add some spacing between buttons */
+					}
+			
+					.pagination button:hover {
+						background-color: #45a049; /* Darker green on hover */
+					}
+			
+					.entries-label {
+						text-align: center;
+						margin-top: 25px;
+					}
+					th:nth-child(1), td:nth-child(1) {
+						font-size: 20px;
+						width: 18%;
+						text-align: center;
+					}
+					th:nth-child(2) {
+						font-size: 20px;
+					}
+			
+					th:nth-child(2), td:nth-child(2) {
+						text-align: center;
+						font-size: 20px;
+					}
+			
+					td:nth-child(2) {
+						text-align: justify;
+						white-space: normal;
+					}
+					th:nth-child(3), td:nth-child(3) {
+						font-size: 20px;
+						width: 18%;
+						text-align: center;
+					}
+					 .folder-icon {
+						font-size: 100px;
+				
+			}
+			
+			
+				</style>
+			</head>
+			
+			<body>
+			
+				<nav class="navbar background">
+					<ul class="nav-list">
+						<div class="logo">
+							<img src="images/logo3.png">
+							<img src="images/logo2.png">
+						</div>
+			
+						<li><a href="index.html">Home</a></li>
+			<ul class="dropdown">
+						<li><a href="#">Admin Documents</a>
+			<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+						<li><a href="SO.html">Special Order</a></li>
+						<li><a href="Concept Note.html">Concept Note</a></li>
+						<li><a href="Training-Advisories.html">Advisories</a></li>
+						<li><a href="Training-Program.html">Programs</a></li>
+						<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+						<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+						<li><a href="Process-Flow.html">Process Flow</a></li>
+						<li><a href="Training-Reports.html">Training Reports</a></li>
+						<li><a href="Travel-Request.html">Travel Request</a></li>
+			</li>
+			</ul>
+			</ul><ul class="dropdown">
+						<li><a href="#">Technical Documents</a><ul>
+						<li><a href="Manuals.html">Manual of Operations</a></li>
+						<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+						<li><a href="Questionnaire.html">Questionnaires</a></li>
+						<li><a href="ListOfSamples.html">List of Samples</a></li>
+						<li><a href="infographics.html">Infographics</a></li>
+						<li><a href="#">Data Requests & Client Served</a></li>
+						<li><a href="photo.html">Photo Gallery</a></li>
+			</li>
+			</ul>
+			</ul>
+						
+			<ul class="dropdown">
+					<li><a href="">Monitoring</a>
+						<ul>
+											<li><a href="#">2023</a>
+							<ul>
+								
+								<li><a href="Cereals.html">Cereals</a></li>
+								<li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+								<li><a href="Fisheries.html">Fisheries</a></li>
+								<li><a href="Crops.html">Other Crops</a></li>
+								<li><a href="Farm-Price.html">Farm Price</a></li>
+							
+							</ul>
+			
+							</li>
+						
+						</ul>
+					</ul>
+				</ul>
+			
+			</ul>
+			</nav>
+				<article class="firstsection">
+					<div class="box-main">
+						<div class="firstHalf">
+							
+							<p class="text-small">
+								<img src="images/Monitoring1.jpg" 
+									 width="1400" 
+									 height="250" />
+												</p>
+			
+			
+						</div>
+					</div>
+				</article><br>
+			<section>
+				<center><div class="section-header">Training Advisories</div></center>
+					<div><center>
+						<label for="entries">Show entries: </label>
+						<select id="entries" onchange="updateTable()">
+							<option value="10">10</option>
+							<option value="20">20</option>
+							<option value="30">30</option>
+						</select>
+					</div></center>
+			<br>
+					<table>
+						<thead>
+							<tr>
+								<th>PDF FILE</th>
+								<th>ACTIVITY</th>
+								<th>DATE</th>
+							</tr>
+						</thead>
+						<tbody id="tableBody">
+							<!-- Rows and columns will be added dynamically using JavaScript -->
+						</tbody>
+					</table>
+			<br><br>
+					<div class="pagination">
+						<button id="prevButton" onclick="showPrevious()">&#9664; Previous</button>
+						<span id="pageNumber">1</span>
+						<button id="nextButton" onclick="showNext()">Next &#9654;</button>
+						<p id="entriesShown">Showing 1 - 10 of 21 entries</p>
+					</div>
+				</section>
+			
+				<script>
+					// Sample data to populate the table
+					const data = [
+						// Updated the first column to include PDF links
+						["<a href='Advisories/Ad5.pdf' target='_blank'>📂</a>", "Advisory on Second Level Training on the Use of Computer-Assisted Personal Interviewing (CAPI) for Fisheries Surveys and Inclusion of Data Items on Income and Wage in Quarterly Commercial Fisheries Survey (QCFS) and Quarterly Municipal Fisheries Survey (QMFS)", "03-05 October 2023"],
+						["<a href='Advisories/Ad03.pdf' target='_blank'>📂</a>", "Advisory on the Task Force Training on the Use of Computer-Assisted Personal Interviewing for Livestock and Poultry Surveys", "12 to 16 September 2023"],
+						["<a href='Advisories/Ad4.pdf' target='_blank'>📂</a>", "Advisory on 2023 Second Level Training on the Redesigned Crops Production Survey (CrPS) and Rice and Corn Stocks Surveys (RCSS)", "28 August to 01 September 2023"],
+						["<a href='Advisories/Ad05.pdf' target='_blank'>📂</a>", "Advisory on the Task Force Training on Data Review, Validation and Analysis)", "23 to 25 August 2023"],
+						["<a href='Advisories/Ad3.pdf' target='_blank'>📂</a>", "Advisory on the Regional Data Review (RDR) for the Second Quarter 2023 on Agricultural Statistics (AgStat)", "11 to 14 July 2023"],
+						["<a href='Advisories/Ad2.pdf' target='_blank'>📂</a>", "Advisory on the Second Level Training of 2023 Updating of List of Aquaculture Farms (ULAF)", "19 to 23 June 2023"],
+						["<a href='Advisories/Ad02.pdf' target='_blank'>📂</a>", "Advisory on the Writeshop on the Finalization of the 2022 Survey on Costs and Returns of Palay Production", "31 May to 02 June 2023"],
+						["<a href='Advisories/Ad1.pdf' target='_blank'>📂</a>", "Advisory on the Regional Data Review (RDR) for the First Quarter 2023 on Agricultural Statistics (AgStat)", "17 to 20 April 2023"],
+						["<a href='Advisories/Ad04.pdf' target='_blank'>📂</a>", "Advisory on the Second Level Operational Training on Fisheries Surveys", "07 to 09 March 2023"],
+						["<a href='Advisories/Ad01.pdf' target='_blank'>📂</a>", "Advisory on the Training of Trainers (RSSO/PSO Staff) for the 2022 Survey on Costs and Returns of Palay Production Second Round", "23 to 27 January 2023"],
+			
+					];
+			
+					// Variables to track the current page and number of entries per page
+					let currentPage = 1;
+					let entriesPerPage = 10;
+			
+					// Function to update the table based on the selected number of entries
+					function updateTable() {
+						const select = document.getElementById("entries");
+						entriesPerPage = parseInt(select.value);
+						currentPage = 1;
+						showPage(currentPage);
+					}
+			
+					// Function to show a specific page of entries
+					function showPage(page) {
+						const tableBody = document.getElementById("tableBody");
+						const startIndex = (page - 1) * entriesPerPage;
+						const endIndex = startIndex + entriesPerPage;
+			
+						// Clear the table
+						tableBody.innerHTML = "";
+			
+						// Populate the table with data for the current page
+						for (let i = startIndex; i < endIndex && i < data.length; i++) {
+							const rowData = data[i];
+							const row = document.createElement("tr");
+							rowData.forEach(cellData => {
+								const cell = document.createElement("td");
+								// Convert to HTML to render links
+								if (cellData.includes("<a href=")) {
+									cell.innerHTML = cellData;
+								} else {
+									cell.textContent = cellData;
+								}
+								row.appendChild(cell);
+							});
+							tableBody.appendChild(row);
+						}
+			
+						// Update the page number
+						const pageNumber = document.getElementById("pageNumber");
+						pageNumber.textContent = page;
+			
+						// Update the entries shown label
+						const entriesShown = document.getElementById("entriesShown");
+						const totalEntries = data.length;
+						const startEntry = (page - 1) * entriesPerPage + 1;
+						const endEntry = Math.min(page * entriesPerPage, totalEntries);
+						entriesShown.textContent = `Showing ${startEntry} - ${endEntry} of ${totalEntries} entries`;
+			
+						// Enable or disable the "Next" and "Previous" buttons
+						const prevButton = document.getElementById("prevButton");
+						const nextButton = document.getElementById("nextButton");
+						prevButton.disabled = page === 1;
+						nextButton.disabled = endIndex >= data.length;
+					}
+			
+					// Function to show the previous page
+					function showPrevious() {
+						if (currentPage > 1) {
+							currentPage--;
+							showPage(currentPage);
+						}
+					}
+			
+					// Function to show the next page
+					function showNext() {
+						const startIndex = currentPage * entriesPerPage;
+						if (startIndex < data.length) {
+							currentPage++;
+							showPage(currentPage);
+						}
+					}
+			
+					// Initial table population
+					updateTable();
+				
+				</script></section><br><br>
+			<center>
+			<img src="images/footer1.jpg" width="1900" height="200">
+			</center>
+				
+			
+			</body>
+			
+			</html>
+			
+        </ul>
+    </ul>
+
+</ul>
+
+</nav>
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images/Monitoring1.jpg" 
+   					  width="1400" 
+   					  height="250" />
+									</p>
+
+
+			</div>
+		</div>
+	</section>
+
+	<section class="secondsection">
+		<div class="box-main">
+			<div class="firstHalf"><pre class="text-small"; style="font-family:verdana;">
+				<h1 class="text-big" id="program"><center>
+TRAINING ADVISORIES</h1>
+<a href="D:\PSA File\Codes Monitoring\OM8.pdf">
+20-24 March 2023</a>
+Second Level Training for Cereals Survey
+
+
+<a href="D:\PSA File\Codes Monitoring\OM5.pdf">
+22 March 2023 - Office Memorandum No. 2023-69</a>
+Subject: Guidelines on the Conduct of the Fisheries Surveys for the Second Quarter of 2023
+
+
+<a href="D:\PSA File\Codes Monitoring\OM1.pdf">15 March 2023 - Office Memorandum No. 2023-58</a>
+Subject: Guidelines on the Conduct of the Rice and Corn Stocks Survey: Household
+and the Rice and Corn Stocks: Commercial for the Second Quarter of 2023
+
+<a href="D:\PSA File\Codes Monitoring\OM2.pdf">
+20 February 2023 - Office Memorandum No. 2023-47</a>
+Subject: Guidelines on the Conduct of the Palay Production Survey and Corn Production Survey
+for April 2023 Round
+
+<a href="D:\PSA File\Codes Monitoring\OM6.pdf">
+26 January 2023 - Office Memorandum No. 2023-23</a>
+Subject: Guidelines on the Conduct of Crops Production Survey for the First Quarter of 2023
+
+<a href="D:\PSA File\Codes Monitoring\OM7.pdf">
+24 January 2023 - Office Memorandum No. 2023-19</a>
+Subject: Guidelines on the Conduct of First Quarter 2023 Backyard Livestock and
+Poultry Survey and Commercial Livestock and Poultry Survey
+
+<a href="D:\PSA File\Codes Monitoring\OM4.pdf">
+20 December 2022 - Office Office Memorandum No. 2022-284</a>
+Subject: Guidelines on the Conduct of Fisheries Surveys for the First Quarter of 2023
+
+<a href="D:\PSA File\Codes Monitoring\OM3.pdf">
+12 December 2022 - Office Office Memorandum No. 2022-274</a>
+Subject: Guidelines on the Conduct of the Monthly Palay and Corn Situation Reporting System
+for February and March 2023 Rounds
+</center>
+				
+				</pre>
+
+
+			</div>
+		</div>
+	</section>
+<center>
+<img src="images/footer1.jpg" width="1900" height="200">
+</center>	
+</body>
+
+</html>

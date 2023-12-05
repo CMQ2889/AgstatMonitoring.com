@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Farm Price</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.column {
+  			float: left;
+  			width: 33.33%;
+  			padding: 5px;
+		}
+
+		.row::after {
+  			content: "";
+  			clear: both;
+  			display: table;
+		}
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  		.dropdown {
+           	 	margin: 0;
+            	padding: 0px;
+            	list-style: none;
+            	width: 150px;
+            	background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		#search {
+			padding: 5px;
+			font-size: 17px;
+			border: 1px solid grey;
+			border-radius: 5px;
+		
+		}
+
+		.firstsection {
+			background-image: url("images/gr.jpg");
+			height: 250px;
+		}
+
+		.secondsection {
+			background-color: honeydew;
+			height: 1300px;
+			width: 100%;
+			justify-content: center;
+		}
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 83%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+			justify-content: center;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			background-image: url("images/peakpx.jpg");
+			color: black;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
+			margin: auto;
+			border: 10px solid limegreen;
+			border-radius: 30px;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: black;
+		}
+			#frame {
+				width: 300px;
+				height: 300px;
+				resize: both;
+				margin-left: auto;
+				margin-right: auto;
+				
+		}
+			#one{
+				background-color: gold;
+				justify-content: center;
+				height: 100px;
+		}
+			.container {
+			  	column-count: 2;
+				column-gap: 150px;
+  				column-rule: 4px;
+}
+			.newspaper {
+ 				 column-count: 4;
+  				column-gap: 150px;
+  				column-rule: 4px;
+}
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="Training-Reports.html">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="Manuals.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="Infographics.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="photo.html">Photo Gallery</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="#">Monitoring</a>
+            <ul>
+                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+
+                </li>
+            
+        </ul>
+</nav>
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images/Monitoring1.jpg" 
+   					  width="1400" 
+   					  height="250">
+									</p>
+
+
+			</div>
+		</div>
+	</section>
+	<section class="secondsection">
+		<div class="box-main">
+<center>
+<div class="firstHalf">
+<pre style="color:black">		<h1 class="text-big" id="program" bgcolor="#20b2aa">
+<b><div id="one">
+ZAMBOANGA PENINSULA
+</h1>
+</pre></b></div>
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQPrQD7deZyG6LqNvCptBQ_BVlyPMKbqqlvU4UbmeiWx1zqWFeDr4CV33kBzLkWNA/pubhtml?widget=true&amp;headers=false" width="1600" height="1000" align="center"></iframe>
+
+</center>
+			</div>
+		</div>
+	</section>
+
+	<center>
+<img src="images/footer3.jpg" width="1900" height="200">
+</center>
+
+</body>
+
+</html>

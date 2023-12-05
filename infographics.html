@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<title>Infographics</title>
+
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+            margin: 0;
+            padding: 0;
+            background-color: ivory;
+        }
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  .dropdown {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+            width: 150px;
+            background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		.firstsection {
+			background-image: url("images/gr.jpg");
+			height: 250px;
+			width: 100%;
+		}
+
+		.secondsection {
+			background-color:ivory;
+			height: 1900px;
+			width: 1900px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+	
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		.newspaper {
+ 				 column-count: 4;
+  				column-gap: 150px;
+  				column-rule: 4px;
+		}
+		section {
+            background-color: #FAE89A;
+            padding: 20px;
+			max-width:1300px;
+			margin: 0 auto;
+        }
+		.section-header {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 10px;
+        }
+	   .outer-container {
+            background-color: #FAE89A; /* Background color for the outer container */
+            padding: 5px; /* Add some padding for spacing */
+			width: 90%;
+			text-align: center;
+			margin:10px 0;
+		}
+		.outer-container h1 {
+            background-color: #4CAF50; /* Background color for the heading */
+            color: #ffffff; /* Text color for the heading */
+            padding: 5px; /* Add padding for spacing within the heading */
+			max-width: 100%;
+		}
+        .image-container {
+            display: center; /* Use a flexbox to arrange images horizontally */
+            justify-content: space-between;
+        }
+        .image-container img {
+            max-width: 10%; /* Ensure images don't exceed the container width */
+            height: auto; /* Maintain image aspect ratio */
+			cursor: pointer;
+}
+
+
+	</style>
+</head>
+
+<body>
+
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="Training-Reports.html">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="Manuals.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="infographic.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="photo.html">Photo Gallery</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="">Monitoring</a>
+            <ul>
+                                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+ 
+                </li>
+            
+            </ul>
+        </ul>
+    </ul>
+
+</ul>
+	
+</nav>
+	<article class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images/Monitoring1.jpg" 
+   					  width="1400" 
+   					  height="250" />
+									</p>
+
+
+			</div>
+		</div>
+	</article><br>	<center><div class="section-header">INFOGRAPHICS</div></center>
+<section>
+
+<center>
+
+	<div class="outer-container">
+		<h1>Cereals</h1><br>
+		<div class="image-container">
+			<img src="infographics/Cereals Oct2023.jpg" alt="Image 1" onclick="showImage('Infographics/Cereals Oct2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/palay Q2.jpg" alt="Image 2" onclick="showImage('infographics/palay Q2.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/palay Q3.jpg" alt="Image 3" onclick="showImage('infographics/palay Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/palay est Q2.jpg" alt="Image 4" onclick="showImage('infographics/palay est Q2.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn april2023.jpg" alt="Image 5" onclick="showImage('infographics/corn april2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn est Q2.jpg" alt="Image 6" onclick="showImage('infographics/corn est Q2.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn prod Q3.jpg" alt="Image 7" onclick="showImage('infographics/corn prod Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn Q1.jpg" alt="Image 8" onclick="showImage('infographics/corn Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn Q2.jpg" alt="Image 9" onclick="showImage('infographics/corn Q2.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/corn Q3.jpg" alt="Image 11" onclick="showImage('infographics/corn Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/palay and corn Q1.jpg" alt="Image 12" onclick="showImage('infographics/palay and corn Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+			<img src="infographics/palay and corn Q3.jpg" alt="Image 12" onclick="showImage('infographics/palay and corn Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+	
+	</div>
+	</div>
+
+	<div class="outer-container">
+	<h1>Crops Production</h1><br>
+    <div class="image-container">
+        <img src="infographics/CrPS Q3.jpg" alt="Image 1" onclick="showImage('Infographics/CrPS Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 1.jpg" alt="Image 2" onclick="showImage('infographics/CrPS Q3 1.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 2.jpg" alt="Image 3" onclick="showImage('infographics/CrPS Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 22.jpg" alt="Image 4" onclick="showImage('infographics/CrPS Q3 22.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 3.jpg" alt="Image 5" onclick="showImage('infographics/CrPS Q3 3.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 4.jpg" alt="Image 6" onclick="showImage('infographics/CrPS Q3 4.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 5.jpg" alt="Image 7" onclick="showImage('infographics/CrPS Q3 5.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 6.jpg" alt="Image 8" onclick="showImage('infographics/CrPS Q3 6.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/CrPS Q3 7.jpg" alt="Image 9" onclick="showImage('infographics/CrPS Q3 7.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="images/1QMajor Vege and RootCrops.jpg" alt="Image 11" onclick="showImage('images/1QMajor Vege and RootCrops.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="images/1QMajor Fruit Crops.jpg" alt="Image 12" onclick="showImage('images/1QMajor Fruit Crops.jpg')">&nbsp&nbsp&nbsp&nbsp
+
+</div>
+</div>
+	<div class="outer-container">
+	<h1>Livestock and Poultry</h1><br>
+    <div class="image-container">
+        <img src="infographics/carabao Q3.jpg" alt="Image 5" onclick="showImage('infographics/carabao Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/carabao Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/carabao Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/cattle Q3.jpg" alt="Image 5" onclick="showImage('infographics/cattle Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/cattle Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/cattle Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/goat Q3.jpg" alt="Image 5" onclick="showImage('infographics/goat Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/goat Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/goat Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/hog Q3.jpg" alt="Image 5" onclick="showImage('infographics/hog Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/hog Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/hog Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/chicken Q3.jpg" alt="Image 5" onclick="showImage('infographics/chicken Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/chicken Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/chicken Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/duck Q3.jpg" alt="Image 5" onclick="showImage('infographics/duck Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/duck Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/duck Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp  
+        <img src="infographics/chicken egg Q3.jpg" alt="Image 5" onclick="showImage('infographics/chicken egg Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/chicken egg Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/chicken egg Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/duck egg Q3.jpg" alt="Image 5" onclick="showImage('infographics/duck egg Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/duck egg Q3 2.jpg" alt="Image 6" onclick="showImage('infographics/duck egg Q3 2.jpg')">&nbsp&nbsp&nbsp&nbsp      
+        <img src="infographics/carabao Q1.jpg" alt="Image 5" onclick="showImage('infographics/carabao Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/cattle Q1.jpg" alt="Image 6" onclick="showImage('infographics/cattle Q1 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/goat Q1.jpg" alt="Image 5" onclick="showImage('infographics/goat Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/swine Q1.jpg" alt="Image 6" onclick="showImage('infographics/swine Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+		<img src="infographics/chicken Q1.jpg" alt="Image 5" onclick="showImage('infographics/chicken Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/duck Q1.jpg" alt="Image 6" onclick="showImage('infographics/duck Q1.jpg')">&nbsp&nbsp&nbsp&nbsp    
+        <img src="infographics/chicken egg Q1.jpg" alt="Image 5" onclick="showImage('infographics/chicken egg Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+        <img src="infographics/duck egg Q1.jpg" alt="Image 6" onclick="showImage('infographics/duck egg Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+		
+	</div>
+</div>
+
+<div class="outer-container">
+<h1>Fisheries</h1><br>
+<div class="image-container">
+	<img src="infographics/fisheries Q2 2.jpg" alt="Image 9" onclick="showImage('infographics/fisheries Q2 2.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/fisheries Q2.jpg" alt="Image 9" onclick="showImage('infographics/fisheries Q2.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/fisheries Q1.jpg" alt="Image 9" onclick="showImage('infographics/fisheries Q1.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/fisheries Q3.jpg" alt="Image 9" onclick="showImage('infographics/fisheries Q3.jpg')">&nbsp&nbsp&nbsp&nbsp
+</div>
+</div>
+
+<div class="outer-container">
+<h1>Prices</h1><br>
+<div class="image-container">
+	<img src="infographics/farmgate prices of palay aug 2023.jpg" alt="Image 9" onclick="showImage('infographics/farmgate prices of palay aug 2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/farmgate prices of palay jun2023.jpg" alt="Image 9" onclick="showImage('infographics/farmgate prices of palay jun2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/price may 2023.jpg" alt="Image 9" onclick="showImage('infographics/price may 2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+	<img src="infographics/price for palay feb 2023.jpg" alt="Image 9" onclick="showImage('infographics/price for palay feb 2023.jpg')">&nbsp&nbsp&nbsp&nbsp
+
+    </center>
+	</div>
+	</div>
+    </section>
+
+    <script>
+        function showImage(imageUrl) {
+            const overlay = document.createElement('div');
+            overlay.style.position = 'fixed';
+            overlay.style.top = 0;
+            overlay.style.left = 0;
+            overlay.style.width = '100%';
+            overlay.style.height = '100%';
+            overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+            overlay.style.display = 'flex';
+            overlay.style.justifyContent = 'center';
+            overlay.style.alignItems = 'center';
+
+            const enlargedImage = document.createElement('img');
+            enlargedImage.src = imageUrl;
+            enlargedImage.style.maxWidth = '90%';
+            enlargedImage.style.maxHeight = '90%';
+
+            overlay.appendChild(enlargedImage);
+
+            overlay.onclick = function () {
+                overlay.remove();
+            };
+
+            document.body.appendChild(overlay);
+        }
+    </script><br><br>
+<center>
+<img src="images/footer1.jpg" width="1900" height="200">
+</center>
+	
+
+</body>
+
+</html>

@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<title>Manuals Of Operations</title>
+<style>
+* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+            margin: 0;
+            padding: 0;
+            background-color: ivory;
+        }
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  .dropdown {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+            width: 150px;
+            background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		.firstsection {
+			background-image: url("images/gr.jpg");
+			height: 250px;
+			width: 100%;
+			}
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+				.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+	
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		.newspaper {
+ 				 column-count: 4;
+  				column-gap: 150px;
+  				column-rule: 4px;
+		}
+	  .section {
+		text-align: center;
+		border: 1px solid #ccc;
+		padding: 20px;
+		background-color: #fadc7b; /* Add your preferred background color here */
+		width: 80%; /* Adjust the width as needed, e.g., 80% of the container width */
+		max-width: 1300px; /* Set a maximum width if desired */
+		margin: 0 auto; /* Center the section horizontally */
+		  }
+		  .link-label {
+			font-weight: bold;
+			cursor: pointer;
+			color: green; /* Change the link text color here */
+		  }
+
+		  .sub-heading {
+			font-size: 25px;
+			margin-top: 15px;
+		  }
+
+		  .sub-heading-label {
+			font-weight: bold;
+		  }
+
+		  .pdf-content {
+			text-align: center;
+			margin-top: 10px;
+
+		  }
+
+		  .pdf-link {
+			display: block;
+			margin: 5px 0;
+			 font-size: 25px;
+			color: green; /* Change the PDF link text color here */
+		  }
+
+		  table {
+			width: 100%;
+			border-collapse: collapse;
+			vertical-align: top; /* Align the table to the top of the section */
+		  }
+
+		  th, td {
+			border: 1px solid #ccc;
+			padding: 10px;
+			text-align: Center;
+			 font-size: 25px;
+			vertical-align: middle; /* Center vertically within cells */
+		  }
+
+		  th {
+			background-color: #4CAF50; /* Header background color */
+			color: white; /* Header text color */
+		   }
+
+		  td:nth-child(2n+1) {
+			background-color: #f0f0f0; /* Alternating row color 1 */
+		  }
+
+		  td:nth-child(2n) {
+			background-color: #e0e0e0; /* Alternating row color 2 */
+		  }
+
+		  .icon {
+			font-size: 25px; /* Adjust the size of the icon */
+			margin-right: 15px;	/* Add spacing between icon and link */
+	
+  }
+</style>
+</head>
+<body>
+
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="#">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="Manuals.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="Infographics.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="photo.html">Photo Gallery</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="">Monitoring</a>
+            <ul>
+                                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+
+                </li>
+            
+            </ul>
+        </ul>
+    </ul>
+
+</ul>
+
+</nav>
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images/Monitoring1.jpg" 
+   					  width="1400" 
+   					  height="250" />
+									</p>
+
+
+			</div>
+		</div>
+	</section><br>
+  <section class="section">
+    <h2>MANUAL OF OPERATIONS</h2>
+    <div class="sub-heading">
+      <p class="sub-heading-label">2023</p>
+     </div><br>
+    <table>
+      <tr>
+        <th>Survey/Activity</th>
+
+      </tr>
+      <tr>
+        <td>
+          <p class="link-label" onclick="toggleLink(1)">
+            <i class="fa fa-book icon"></i> Cereals
+          </p>
+          <div id="pdf1" class="hidden pdf-content">
+            <a class="pdf-link" href="Manuals/CPS2023.pdf" target="_blank">Corn Production Survey (CPS) with Farm Price</a><br>
+            <a class="pdf-link" href="Manuals/PPS2023.pdf" target="_blank">Palay Production Survey (PPS) with Farm Price</a><br>
+            <a class="pdf-link" href="Manuals/MPCSRS2023.pdf" target="_blank">Monthly Palay and Corn Situation Reporting System (MPCSRS)</a><br>
+            <a class="pdf-link" href="Manuals/RCSS%20Household.pdf" target="_blank">Rice and Corn Stocks Survey: Household (RCSS:H)</a><br>
+            <a class="pdf-link" href="Manuals/RCSS%20Commercial.pdf" target="_blank">Rice and Corn Stocks Survey: Commercial (RCSS:C)</a><br> 
+ </div>
+        </td>
+        
+      </tr>
+      <tr>
+        <td>
+          <p class="link-label" onclick="toggleLink(2)">
+            <i class="fa fa-book icon"></i> Livestock and Poultry
+          </p>
+          <div id="pdf2" class="hidden pdf-content">
+            <a class="pdf-link" href="Manuals/BLPSManual.pdf" target="_blank">Backyard Livestock and Poultry Survey</a><br>
+            <a class="pdf-link" href="Manuals/CLPSManual.pdf" target="_blank">Commercial Livestock and Poultry Survey</a><br>
+            <a class="pdf-link" href="Manuals/ManOps_Data_Review.pdf" target="_blank">Livestock and Poultry Data Review, Validation, and Analaysis</a><br>
+            <a class="pdf-link" href="Manuals/CDSPDPManual2023.pdf" target="_blank">Compilation of Data from Slaughterhouses and Poultry Dressing Plants</a><br> 
+		</div>
+        </td>
+       
+      </tr>
+      <tr>
+        <td>
+          <p class="link-label" onclick="toggleLink(3)">
+            <i class="fa fa-book icon"></i> Fisheries
+          </p>
+          <div id="pdf3" class="hidden pdf-content">
+            <a class="pdf-link" href="Manuals/QAqSFOM2023.pdf" target="_blank">Quarterly Aquaculture Survey</a><br>
+            <a class="pdf-link" href="Manuals/QCFSFOM2023.pdf" target="_blank">Quarterly Commercial Fisheries Survey</a><br>
+            <a class="pdf-link" href="Manuals/QIFSFOM2023.pdf" target="_blank">Quarterly Inland Fisheries Survey</a><br>
+            <a class="pdf-link" href="Manuals/QMFSFOM2023.pdf" target="_blank">Quarterly Municipal Fisheries Survey</a><br>
+		  </div>
+        </td>
+       
+      </tr>
+      <tr>
+        <td>
+          <p class="link-label" onclick="toggleLink(4)">
+            <i class="fa fa-book icon"></i> Other Crops
+          </p>
+          <div id="pdf4" class="hidden pdf-content">
+		  <a class="pdf-link" href="Manuals/2-CrPS-Manual-of-Operations-Establishment_09Nov2023.pdf" target="_blank">Crops Production Survey (Establishment)November 2023</a><br>
+		  <a class="pdf-link" href="Manuals/1-CrPS%20Manual%20of%20Operations%20(Household)_07Nov2023.pdf" target="_blank">Crops Production Survey (Household)November 2023</a><br>
+            <a class="pdf-link" href="Manuals/CrPS2023.pdf" target="_blank">Crops Production Survey</a><br>
+            <a class="pdf-link" href="Manuals/CrPS%20Household.pdf" target="_blank">Crops Production Survey (Household)August 2023</a><br>
+			  <a class="pdf-link" href="Manuals/CrPSManualEst.pdf" target="_blank">Crops Production Survey (Establishment)August 2023</a><br>
+          </div>
+        </td>
+       
+      </tr>
+    </table>
+  </section>
+
+<script>
+  function toggleLink(linkNumber) {
+    const pdfContent = document.getElementById(`pdf${linkNumber}`);
+    if (pdfContent.style.display === 'none') {
+      pdfContent.style.display = 'block';
+    } else {
+      pdfContent.style.display = 'none';
+    }
+  }
+</script><br><br>
+	<center>
+		<img src="images/footer1.jpg" width="1900" height="200">
+	</center>
+</body>
+</html>

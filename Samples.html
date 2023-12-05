@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Marquee</title>
+    <style>
+        /* Add some styling to the marquee and containers */
+        .marquee-container {
+            margin-bottom: 50px;
+            border: 1px solid #ccc; /* Add a border to the container */
+            padding: 10px; /* Add padding for better visual appearance */
+            width: 80%; /* Adjust the container width as needed */
+            max-width: 600px; /* Set a maximum width for responsiveness */
+            transition: border-color 0.5s ease;
+            overflow: hidden; 
+        }
+        .marquee-container:hover {
+            cursor: grab; /* Change cursor on hover */
+            border-color: #007bff; /* Change border color on hover */
+        }
+        marquee {
+            width: 100%;
+            overflow: hidden;
+        }
+
+        /* Set a specific width and height for the images */
+        img {
+            width: 250px; /* Adjust the width as needed */
+            height: auto; /* Adjust the height as needed */
+            object-fit: cover; /* Maintain aspect ratio */
+            display: inline-block; /* Display images in a line */
+            margin-right: 10px; /* Add margin between images */
+            transition: transform 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.1); /* Scale the image on hover */
+     }
+     .marquee-container:hover img {
+            transform: translateX(10px); /* Move images to the left on hover */
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Static Image Marquee Container -->
+<div class="marquee-container"onmouseover="stopMarquee()" onmouseout="startMarquee()">
+    <h2>Static Image Marquee</h2>
+    <marquee behavior="scroll" direction="left" scrollamount="5">
+        <img src="images/0CAPICereals.jpg" alt="Image 1">
+        <img src="images/0TFTCrops.jpg" alt="Image 2">
+        <img src="images/1.jpg" alt="Image 3">
+        <img src="images/cereals1.jpg" alt="Image 4">
+        <!-- Add more images as needed -->
+    </marquee>
+</div>
+
+<!-- Dynamic Image Marquee Container -->
+<div class="marquee-container" onmouseover="stopDynamicMarquee()" onmouseout="startDynamicMarquee()">
+    <h2>Dynamic Image Marquee</h2>
+    <marquee behavior="scroll" direction="left" scrollamount="5" id="imageMarquee"></marquee>
+</div>
+
+<script>
+    // Array of image paths
+    var images = ["images/cereals1.jpg", "images/cereals2.jpg", "images/cereals3.jpg"];
+    var dynamicMarquee = document.getElementById("imageMarquee");
+  
+    // Add images to the dynamic marquee
+    images.forEach(function (imagePath) {
+        var img = document.createElement("img");
+        img.src = imagePath;
+        img.alt = "Dynamic Image";
+        dynamicMarquee.appendChild(img);
+    });
+
+    // Function to stop the static marquee on hover
+    function stopMarquee() {
+        document.querySelector(".marquee-container marquee").stop();
+    }
+
+    // Function to start the static marquee on hover out
+    function startMarquee() {
+        document.querySelector(".marquee-container marquee").start();
+    }
+
+    // Function to stop the dynamic marquee on hover
+    function stopDynamicMarquee() {
+        dynamicMarquee.stop();
+    }
+
+    // Function to start the dynamic marquee on hover out
+    function startDynamicMarquee() {
+        dynamicMarquee.start();
+    }
+</script>
+
+</body>
+</html>

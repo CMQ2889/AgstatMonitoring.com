@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Home</title>
+    <style>
+			* {
+			margin: 0;
+			padding: 0;
+		}
+            span, f {
+                text-indent: 25px;
+}
+			div {
+  				text-align: justify;
+  				text-justify: inter-word;
+}
+			.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: fixed;
+			top: 0;
+			cursor: pointer;
+			width: 100%;
+			z-index: 1000;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  .dropdown {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+            width: 150px;
+            background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+
+		.firstsection {
+			background-image: url("images/farm.jpg");
+			height: 250px;
+			margin-top: 3%;
+		}
+		.halfsection {
+			background-color: #e6ffe6;			
+			height: 300px;
+			text-align: justify;
+			font-size: 25px;
+			margin: 20px 40px 20px 100px;
+			max-width: 150%;
+			
+		}
+		.secondsection {
+			background-color: #e6ffe6;			
+			height: 870px;
+			text-align: justify;
+			font-size: 25px;
+			margin: 20px 130px 0px;
+			max-width: 100%;
+			border: 15px solid limegreen;
+			border-radius: 30px;
+		}
+
+		.thirdsection {
+			background-color: #f6ffe4;			
+			height: 4500px;
+			text-align: center;
+			font-size: 25px;
+			max-width: 3200px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 18px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+		}
+
+		.section {
+			background-image: url("images/farm.jpg");
+			color: black;
+			height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			max-width: 100%;
+			margin: auto;
+			border: 10px solid limegreen;
+			border-radius: 30px;
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+			
+			.gfg {
+        			-webkit-column-count: 2;
+        			-moz-column-count: 2;
+        			column-count: 2;
+		
+         
+        			-webkit-column-gap: 40px;
+       			-moz-column-gap: 50px;
+        			column-gap: 30px; 
+    		}
+     
+    			h3 {
+       			color:green;
+    		}
+     
+    			h3, h2 {
+        			text-align:center;
+}
+		.bg {
+ 			background-color: #f6ffe4;
+			height: 100%; 
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
+}	
+	
+        /* Define a CSS class for the table header with a colored background */
+        .table-header {
+            background-color: #4CAF50; /* Blue background color */
+            color: #ffffff; /* White text color */
+            font-weight: bold; /* Bold text */
+			font-size: 20px;
+			text-align: center;
+        }
+
+        /* Define a CSS class for the table cells (optional) */
+        .table-cell {
+            padding: 10px;
+			text-align: center;
+			font-size: 18px;
+        }
+
+        /* Left-align the content in the first column */
+        .left-align {
+            text-align: left;
+        }
+
+        /* Center the table on the page */
+        .center-table {
+            display: flex;
+            justify-content: center;
+        }
+
+        /* Define a CSS class for the colored background */
+        .colored-background {
+            background-color: #AEEC8B; /* Orange background color */
+            color: #080808; /* White text color */
+        }
+
+        /* Style for the container with background color and adjusted width */
+        .container {
+            background-color: #FAE89A; /* Background color for the container */
+            padding: 20px; /* Add some padding for spacing */
+            text-align: center; /* Center the content in the container */
+            max-width: 1500px; /* Adjust the width as needed */
+            margin: 0 auto; /* Center the container horizontally */
+            border: 5px solid #4CAF50;
+        }
+
+        /* Change the background color of the table */
+        .table {
+            background-color: #F2FBE6; /* Change the table background color to pink */
+        }
+		  .marquee {
+        margin: 0 auto;
+        width: 1530px;
+        height: 300px; /* Adjust the height as needed */
+        white-space: nowrap;
+        overflow: hidden;
+        box-sizing: border-box;
+        position: relative;
+      }
+      .marquee:before,
+      .marquee:after {
+        position: absolute;
+        top: 0;
+        width: 50px;
+        height: 200px;
+        content: "";
+        z-index: 2;
+        }
+      .marquee:before {
+        left: 0;
+        background: linear-gradient(to right, #FAE89A 10%, transparent 80%);
+        height: 300px;
+      }
+      .marquee:after {
+        right: 0;
+        background: linear-gradient(to left, #FAE89A 10%, transparent 80%);
+        height: 300px;
+     }
+      .marquee__content {
+        width: 500%; /* Adjust the width as needed */
+        display: flex;
+        line-height: 200px; /* Adjust the line height as needed */
+        animation: marquee 70s linear infinite forwards;
+		background-color: #faf1cc;
+      }
+      .marquee__content:hover {
+        animation-play-state: paused;
+      }
+      .list-inline {
+        display: flex;
+        justify-content: space-around;
+        width: 33.33%;
+        /* reset list */
+        list-style: none;
+        padding: 0;
+        margin: 0;
+            }
+      .list-inline li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+		margin: 0;
+	  }
+      .list-inline img {
+        width: 350px;
+        height: 280px;
+		margin: 0;
+      }
+      .caption {
+        text-align: center;
+        margin: 0;
+		padding: 5px;
+        background-color: #4CAF50; /* Background color for the captions */
+        color: #fff; /* Text color for the captions */
+	  }
+      .list-inline img,
+      .caption {
+        border: 5px solid #4CAF50;
+        padding: 5px;
+	  }
+      @keyframes marquee {
+        0% {
+          transform: translateX(0);
+        }
+        100% {
+          transform: translateX(-66.6%);
+        }
+      }
+    </style>
+</head>
+<body>
+<div class="bg">
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="#">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="Manuals.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="infographics.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="photo.html">Photo Gallery</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="">Monitoring</a>
+            <ul>
+                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+                </li>
+            
+            </ul>
+        </ul>
+    </ul>
+
+</ul>
+</nav>
+	<section class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images/Monitoring.jpg" 
+   					  width="1400" 
+   					  height="250" />
+									</p>
+
+
+			</div>   
+		</div>
+	</section>
+	<br><br>
+	
+
+	  <div class="marquee">
+      <div class="marquee__content">
+        <ul class="list-inline"><a href="photo.html">
+          <li><img src="images/0CAPICereals.jpg" alt="Image 1">
+		  <div class="caption">Caption</div></li></a>
+          <li><img src="images/1Cereals.jpg" alt="Image 2">
+		  <div class="caption">Caption</div></li>
+          <li><img src="images/1CrPS2LT.jpg" alt="Image 3">
+		  <div class="caption">Caption</div></li>
+          <li><img src="images/1LP2ndLT.jpg" alt="Image 4">
+		  <div class="Second Level">Caption</div></li>
+          <li><img src="images/1RDR.jpg" alt="Image 5">
+		 <div class="caption">Caption</div> </li>
+        </ul>
+        <ul class="list-inline">
+           <li><img src="images/1RDR3Q23.jpg" alt="Image 1">
+		   <div class="caption">Caption</div></li>
+          <li><img src="images/1TFTCrops.jpg" alt="Image 2">
+		  <div class="caption">Caption</div></li>
+          <li><img src="images/2CAPICereals.jpg" alt="Image 3">
+		  <div class="caption">Caption</div></li>
+          <li><img src="images/2Cereals.jpg" alt="Image 4">
+		  <div class="caption">Caption</div></li>
+          <li><img src="images/2CrPS2LT.jpg" alt="Image 5">
+		  <div class="caption">Caption</div></li>
+        </ul>
+        <ul class="list-inline">
+          <li><img src="images/2LP2ndLT.jpg" alt="Image 1"></li>
+          <li><img src="images/2RDR.jpg" alt="Image 2"></li>
+          <li><img src="images/2RDR3Q23.jpg" alt="Image 3"></li>
+          <li><img src="images/2TFTCrops.jpg" alt="Image 4"></li>
+          <li><img src="images/3CAPICereals.jpg" alt="Image 5"></li>
+        </ul>
+		        <ul class="list-inline">
+				</ul>
+      </div>
+    </div><br><br><br>
+<div class="container"><br>
+    <h1 style="background-color: #FAE89A;">2023 ACTIVITIES</h1><br><br>
+    <div class="center-table">
+        <table border="1" class="table">
+            <tr>
+                <!-- Merged header cell spanning four columns -->
+
+            </tr>
+            <tr>
+                <!-- Table header row with the colored background -->
+                <th class="table-header" style="width: 400px; height: 50px;">PPAs</th>
+                <th class="table-header">Timeline</th>
+                <th class="table-header">Responsible Division/s</th>
+                <th class="table-header">Remarks</th>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Palay Production (PPS)</td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Corn Production Survey (CPS) with Farmgate Price</td>
+            </tr>
+            <tr>
+                <!-- Table data rows with the first column left-aligned and column/row size adjustments -->
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">1. Operational Training</td>
+                <td class="table-cell" style="width: 300px; height: 20px;"></td>
+                <td class="table-cell" style="width: 250px; height: 20px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 250px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp1.a. 1st Level Training</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">06 to 11 Mar</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp1.b. 2nd Level Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">20 to 25 Mar</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">2. Training of SRs<br>* -any three days per discretion of PSO</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 4th week of Mar, Jun, Sep and Nov</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">3. Data Collection and Supervision</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">First 10 days of the month following the reference quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">4. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">Every 2nd to 12th day of the month following the reference quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO, RSSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">5. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;"></td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO,RSSO,CSD,PSD</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.a. Oct-Dec 2022</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">11 Jan</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.b. Jan-Mar 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">12 to 26 Apr</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.c. Apr-Jun 2023</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">11 to 26 Jul</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.d. Jul-Sep 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">11 to 25 Oct</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>				
+            <!-- Merge and add color background to the fourth row -->
+            <tr>
+                <td class="table-cell left-align colored-background" colspan="4">Monthly Palay and Corn Situation Reporting System (MPCSRS)</td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">a. Operational Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">simultaneous with PPS and CPS</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 50px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">b. Training of SRs</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 4th week of Jan, Apr, Jul and Oct</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">c. Data Collection and Supervision</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 1st to 5th day of Feb, Mar, May, Jun, Aug, Sep and Nov</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">d. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 2nd to 14th day of Feb, Mar, May, Jun, Aug, Sep and Nov</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">e. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 15th to 22nd day of Feb, Mar, May, Jun, Aug, Sep and Nov</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>
+            <tr>
+                <td class="table-cell left-align colored-background" colspan="4">Redesigned Rice and Corn Stocks Survey: Household (RCSS:H)</td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">a. Operational Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">simultaneous with PPS and CPS</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 50px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">b. Training of SRs</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 4th week of Mar, Jun, Sep and Dec</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">c. Data Collection and Supervision</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 1st to 4th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">d. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 6th to 8th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">e. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 8th to 18th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>
+            <tr>
+                <td class="table-cell left-align colored-background" colspan="4">Redesigned Rice and Corn Stocks Survey: Commercial (RCSS:C)</td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">a. Operational Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">simultaneous with PPS and CPS</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 50px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">b. Training of SRs</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 4th week of Mar, Jun, Sep and Dec</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">c. Data Collection and Supervision</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 1st to 4th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">d. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">Every 6th to 8th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">e. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 8th to 18th day of the reference month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Redesigned Crops Production Survey (CrPS) with Farmgate Price</td>
+            </tr>
+            <tr>
+                <!-- Table data rows with the first column left-aligned and column/row size adjustments -->
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">1. Operational Training</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.a. 1st Level Training</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">20 to 23 Feb</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.b. 2nd Level Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">28 Feb to 03 Mar</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">2. Training of SRs</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 3rd week of Mar, Jun, Sep and Nov</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">3. Data Collection and Supervision</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">last 10 days of the last month of the quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">4. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">Every 1st to 11th day of the month after the reference quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">5. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;"></td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO,RSSO,CSD,PSD</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.a. Oct-Dec 2022</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">09 to10 Jan</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.b. Jan-Mar 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">10 to 25 Apr</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.c. Apr-Jun 2023</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">10 to 25 Jul</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.d. Jul-Sep 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">09 to 24 Oct</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Livestock and Poultry Survey (Household) - Formerly Backyard Livestock and Poultry Survey</td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Livestock and Poultry Survey (Establishment) - Formerly Commercial Livestock and Poultry Survey</td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Compilation of Data from Slaughterhouses and Poultry Dressing Plants  </td>
+            </tr>
+     <tr>
+                <!-- Table data rows with the first column left-aligned and column/row size adjustments -->
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">1. Operational Training</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">CSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.a. 1st Level Training</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">20 to 24 Feb</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.b. 2nd Level Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">27 Feb to 03 Mar (1st Batch)<br>06 to 10 March (2nd Batch)</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">2. Briefing of SRs (any two-days)</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp2.a. LPS (Establishment)</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">Every 3rd week of March, June, September and November</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp2.b. LPS (Household)</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Every 4th week of March, June, September and November</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">3. Data Collection</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp3.a. LPS (Establishment)</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">Last 10 days of the last month of the quarter, except Q4 (1 month earlier)</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp3.b. LPS (Household)</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">1st 7 days of the month after the reference quarter, except Q4 (1 month earlier)</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp3.c. CDSPDP</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">1st 10 days of the month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">4. Data Processing and Generation of Output Tables</td>
+                <td class="table-cell" style="width: 200px; height: 20px;">Every 1st to 12th day of the month after the reference quarter</td>
+                <td class="table-cell" style="width: 120px; height: 20px;">PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">5. Data Review and Validation</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;"></td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp5.a. Provincial Data Review<br>(any two-days)</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">Q1 2023 - 13 to 14 April<br>Q2 2023 - 13 to 14 July<br>Q3 2023 - 12 to 13 October</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp5.b. Regional Data Review<br>(any two-days)</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Q1 2023 - 20 to 21 April<br>Q2 2023 - 20 to 21 July<br>Q3 2023 - 19 to 20 October<br>Q4 2023 - 21 to 22 December</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp5.c. LPSD Consultation with RSSO Representative</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">Q4 2022 - 12 to 13 January<br>Q1 2023 - 27 to 28 April<br>Q2 2023 - 27 to 28 July<br>Q3 2023 - 26 to 27 October</td>
+                <td class="table-cell" style="width: 120px; height: 30px;">LPSD and RSSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Quarterly Commercial Fisheries Survey(QCFS)</td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Quarterly Municipal Fisheries Survey (QMFS)</td>
+            </tr>
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Quarterly Inland Fisheries Survey (QIFS)</td>
+            </tr>	
+			<tr>
+                <td class="table-cell left-align colored-background" colspan="4">Quarterly Aquaculture Survey (QAqS)</td>
+            </tr>
+     <tr>
+                <!-- Table data rows with the first column left-aligned and column/row size adjustments -->
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">1. Operational Training</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">FSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.a. Task Force Training</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">20 to 23 Feb</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.b. 2nd Level Training</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">02 to 03 March</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp1.c. 3rd Level Training</td>
+                <td class="table-cell" style="width: 200px; height: 20px;">Any one day prior to data collection</td>
+                <td class="table-cell" style="width: 120px; height: 20px;"></td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">2. Data Collection</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;">Data collection using CAPI</td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp2.a. QCFS and QMFS</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">One day per week</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;">Redesigned survey starting Q2 2022</td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp2.b. QIFS and QAqS</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">2nd to 3rd week of the last month of the quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;">Redesigned<br>QIFS - Q1 2021<br>QAqS - Q1 2022</td>
+            </tr>
+     <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">3. Data Processing</td>
+                <td class="table-cell" style="width: 200px; height: 20px;"></td>
+                <td class="table-cell" style="width: 120px; height: 20px;">PSO</td>
+                <td class="table-cell" style="width: 150px; height: 20px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 300px; height: 20px;">&nbsp&nbsp&nbsp&nbsp3.a. QCFS and QMFS</td>
+                <td class="table-cell" style="width: 100px; height: 20px;">Last week of the month to 1st week of the succeeding month</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+            <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 20px;">&nbsp&nbsp&nbsp&nbsp3.b. QIFS and QAqS</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">3rd week of the last month of the quarter</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 200px; height: 30px;">5. Data Review and Validation</td>
+                <td class="table-cell" style="width: 80px; height: 30px;"></td>
+                <td class="table-cell" style="width: 120px; height: 30px;">FSD, RSSO and PSO</td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.a. Jan-Mar 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">03 to 09 Apr</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.b. Apr-Jun 2023</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">03 to 19 Jul</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.c. Jul-Sep 2023</td>
+                <td class="table-cell" style="width: 80px; height: 30px;">02 to 18 Oct</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>	
+</tr>
+   <tr>
+                <td class="table-cell left-align" style="width: 100px; height: 30px;">&nbsp&nbsp&nbsp5.d. Oct-Dec 2022</td>
+                <td class="table-cell" style="width: 150px; height: 30px;">04 to 20 Dec</td>
+                <td class="table-cell" style="width: 120px; height: 30px;"></td>
+                <td class="table-cell" style="width: 100px; height: 30px;"></td>
+            </tr>			
+        </table>
+    </div>
+</div><br><br>
+	<center>
+<img src="images/footer2.jpg" width="1900" height="200">
+</center>
+</body>
+</html>

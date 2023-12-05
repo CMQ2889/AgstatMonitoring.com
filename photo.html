@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Photo Gallery</title>
+    <style>
+ 
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		body {
+            margin: 0;
+            padding: 0;
+            background-color: ivory;
+        }
+
+		.navbar {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: sticky;
+			top: 0;
+			cursor: pointer;
+			z-index:1;
+		}
+
+		.background {
+			background: black;
+			background-blend-mode: darken;
+			background-size: cover;
+		}
+
+		.nav-list {
+			width: 70%;
+			display: flex;
+			align-items: center;
+		}
+
+		.logo {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.logo img {
+			width: 50px;
+			border-radius: 20px;
+		}
+
+		.nav-list li {
+			list-style: none;
+			padding: 15px 20px;
+		}
+
+		.nav-list li a {
+			text-decoration: none;
+			color: white;
+		}
+
+		.nav-list li a:hover {
+			color: black;
+		}
+  .dropdown {
+            margin: 0;
+            padding: 0px;
+            list-style: none;
+            width: 150px;
+            background-color: #000000;
+        }
+
+        .dropdown li {
+            position: relative;
+        }
+
+        .dropdown li a {
+            color: #ffffff;
+            text-align: center;
+            text-decoration: none;
+            display: block;
+            padding: 0px;
+        }
+
+        .dropdown li ul {
+            position: absolute;
+            top: 100%;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: none;
+            line-height: normal;
+            background-color: black;
+        }
+
+        .dropdown li ul li a {
+            text-align: left;
+            color: #cccccc;
+            font-size: 14px;
+            padding: 0px;
+            display: block;
+            white-space: nowrap;
+        }
+
+        .dropdown li ul li a:hover {
+            background-color: #ffd700;
+            color: #ffffff;
+        }
+
+        .dropdown li ul li ul {
+            left: 90%;
+            top: 0;
+        }
+
+        ul li:hover>a {
+            background-color: #0abf53;
+            color: #ffffff !important;
+        }
+
+        ul li:hover>ul {
+            display: block;
+        }
+		.rightnav {
+			width: 30%;
+			text-align: right;
+		}
+		.firstsection {
+			background-image: url("images/gr.jpg");
+			height: 250px;
+			width: 100%;
+		}
+
+		.secondsection {
+			background-color:ivory;
+			height: 1900px;
+			width: 1900px;
+		}
+
+		.box-main {
+			display: flex;
+			justify-content: center;
+			align-items: left;
+			color: black;
+			max-width: 80%;
+			margin: auto;
+			height: 80%;
+		}
+
+		.firsthalf {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.secondhalf {
+			width: 30%;
+		}
+
+		.secondhalf img {
+			width: 70%;
+			border: 4px solid white;
+			border-radius: 200px;
+			display: block;
+			margin: auto;
+		}
+
+		.text-big {
+			font-family: 'Piazzolla', serif;
+			font-weight: bold;
+			font-size: 35px;
+		}
+		.text-xsmall {
+			font-size: 15px;
+		}
+		.text-small {
+			font-size: 25px;
+		}
+
+		.btn {
+			padding: 8px 20px;
+			margin: 7px 0;
+			border: 2px solid white;
+			border-radius: 8px;
+			background: none;
+			color: white;
+			cursor: pointer;
+		}
+
+		.btn-sm {
+			padding: 6px 10px;
+			vertical-align: middle;
+	
+		}
+
+		.section-Left {
+			flex-direction: row-reverse;
+		}
+
+		.paras {
+			padding: 0px 65px;
+		}
+
+		.thumbnail img {
+			width: 80px;
+			border: 2px solid black;
+			border-radius: 26px;
+			margin-top: 5px;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.text-footer {
+			text-align: center;
+			padding: 30px 0;
+			font-family: 'Ubuntu', sans-serif;
+			display: flex;
+			justify-content: center;
+			color: white;
+		}
+		.newspaper {
+ 				 column-count: 4;
+  				column-gap: 150px;
+  				column-rule: 4px;
+		}
+		section {
+            background-color: #FAE89A;
+            padding: 20px;
+			max-width:1300px;
+			margin: 0 auto;
+        }
+		.section-header {
+			font-size: 24px;
+			font-weight: bold;
+			margin-bottom: 20px;
+		}
+		.gallery-section {
+            background-color: #FAE89A;
+            padding: 20px;
+            text-align: center;
+			width: 1300px;
+			margin: 0 auto;
+        }
+
+        .section-header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px;
+        }
+
+        .album-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .album-item {
+            border: 1px solid #ccc;
+            box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+            max-width: 250px;
+            text-align: center;
+            margin: 10px;
+            padding: 10px;
+            position: relative;
+        }
+
+        .album-image {
+            width: 100%;
+            height: auto;
+            cursor: pointer;
+        }
+
+        .caption {
+            padding: 10px;
+            bottom: 0;
+            color: #333;
+        }
+
+
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            text-align: center;
+        }
+
+        .lightbox img {
+            max-width: 80%;
+            max-height: 80%;
+            margin: 10% auto;
+            display: block;
+        }
+
+        .close-button {
+            position: absolute;
+            top: 50px;
+            right: 50px;
+            color: #fff;
+            font-size: 50px;
+            cursor: pointer;
+			z-index: 2;
+			
+        }
+    </style>
+</head>
+<body>
+	<nav class="navbar background">
+		<ul class="nav-list">
+			<div class="logo">
+				<img src= "images/logo3.png">
+				<img src= "images/logo2.png">
+			</div>
+
+			<li><a href="index.html">Home</a></li>
+<ul class="dropdown">
+			<li><a href="#">Admin Documents</a>
+<ul>			<li><a href="OM.html">Office Memorandum</a></li>
+			<li><a href="SO.html">Special Order</a></li>
+			<li><a href="Concept Note.html">Concept Note</a></li>
+			<li><a href="Training-Advisories.html">Advisories</a></li>
+			<li><a href="Training-Program.html">Programs</a></li>
+			<li><a href="Attendance-Sheet.html">Attendance Sheet</a></li>
+			<li><a href="Evaluation-Forms.html">Evaluation Forms</a></li>
+			<li><a href="Process-Flow.html">Process Flow</a></li>
+			<li><a href="Training-Reports.html">Training Reports</a></li>
+			<li><a href="Travel-Request.html">Travel Request</a></li>
+</li>
+</ul>
+</ul><ul class="dropdown">
+			<li><a href="#">Technical Documents</a><ul>
+			<li><a href="Manuals.html">Manual of Operations</a></li>
+			<li><a href="DPS-Manual.html">Manual on Data Processing</a></li>
+			<li><a href="Questionnaire.html">Questionnaires</a></li>
+			<li><a href="ListOfSamples.html">List of Samples</a></li>
+			<li><a href="Infographics.html">Infographics</a></li>
+			<li><a href="#">Data Requests & Client Served</a></li>
+			<li><a href="#">Photo Gallery</a></li>
+</li>
+</ul>
+</ul>
+			
+<ul class="dropdown">
+        <li><a href="">Monitoring</a>
+            <ul>
+                                <li><a href="#">2023</a>
+                <ul>
+                    
+                    <li><a href="Cereals.html">Cereals</a></li>
+                    <li><a href="Livestock&Poultry.html">Livestock and Poultry</a></li>
+                    <li><a href="Fisheries.html">Fisheries</a></li>
+                    <li><a href="Crops.html">Other Crops</a></li>
+                    <li><a href="Farm-Price.html">Farm Price</a></li>
+                
+                </ul>
+
+                </li>
+            
+            </ul>
+        </ul>
+    </ul>
+
+</ul>
+
+</nav>
+	<article class="firstsection">
+		<div class="box-main">
+			<div class="firstHalf">
+				
+				<p class="text-small">
+					<img src="images\Monitoring1.jpg" 
+   					  width="1400" 
+   					  height="250" />
+									</p>
+
+
+			</div>
+		</div>
+	</article><br>
+    <section class="gallery-section">
+        <div class="section-header">
+            <h2>PHOTO GALLERY</h2>
+            <p>2023</p>
+        </div>
+        <div class="album-container">
+            <div class="album-item">
+                <img class="album-image" src="images/1RDR3Q23.jpg" alt="Album 1 Image 1">
+                <div class="caption">Third Quarter 2023 Regional Data Review (RDR) on Agricultural Statistics (AgStat) conducted on October 16-19, 2023, in Dipolog City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/1RDR3Q23.jpg" alt="Album 1 Image 2">
+                    <img src="images/2RDR3Q23.jpg" alt="Album 1 Image 3">
+                    <img src="images/3RDR3Q23.jpg" alt="Album 1 Image 4">
+                    <img src="images/4RDR3Q23.jpg" alt="Album 1 Image 5">
+					<img src="images/5RDR3Q23.jpg" alt="Album 1 Image 6">
+                    <img src="images/6RDR3Q23.jpg" alt="Album 1 Image 7">
+                    <img src="images/7RDR3Q23.jpg" alt="Album 1 Image 8">
+                    <img src="images/8RDR3Q23.jpg" alt="Album 1 Image 9">
+                    <img src="images/9RDR3Q23.jpg" alt="Album 1 Image 10">
+                    <img src="images/10RDR3Q23.jpg" alt="Album 1 Image 11">
+                    <img src="images/11RDR3Q23.jpg" alt="Album 1 Image 12">
+                    <img src="images/12RDR3Q23.jpg" alt="Album 1 Image 13">
+					<img src="images/13RDR3Q23.jpg" alt="Album 1 Image 14">
+                    <img src="images/14RDR3Q23.jpg" alt="Album 1 Image 15">
+                    <img src="images/15RDR3Q23.jpg" alt="Album 1 Image 16">
+                    <img src="images/16RDR3Q23.jpg" alt="Album 1 Image 17">
+                </div>
+            </div>
+            <!-- Album 1 -->
+            <div class="album-item">
+                <img class="album-image" src="images/1.jpg" alt="Album 1 Image 1">
+                <div class="caption">Conduct of Second Level Training on the Use of CAPI for Fisheries Surveys and Inclusion of Data Items on Income and Wage in Quarterly Commercial Fisheries Survey and Quarterly Municipal Fisheries Survey conducted on October 3-5, 2023, in Pagadian City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/1.jpg" alt="Album 1 Image 2">
+                    <img src="images/2.jpg" alt="Album 1 Image 3">
+                    <img src="images/3.jpg" alt="Album 1 Image 4">
+                    <img src="images/4.jpg" alt="Album 1 Image 5">
+					<img src="images/5.jpg" alt="Album 1 Image 6">
+                    <img src="images/6.jpg" alt="Album 1 Image 7">
+                    <img src="images/7.jpg" alt="Album 1 Image 8">
+                </div>
+            </div>
+
+            <!-- Album 2 -->
+            <div class="album-item">
+                <img class="album-image" src="images/3RDR.jpg" alt="Album 2 Image 1">
+                <div class="caption">Second Quarter 2023 Regional Data Review (RDR) on Agricultural Statistics (AgStat) conducted on July 11-14, 2023, in Pagadian City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/1RDR.jpg" alt="Album 2 Image 2">
+                    <img src="images/2RDR.jpg" alt="Album 2 Image 3">
+                    <img src="images/3RDR.jpg" alt="Album 2 Image 4">
+                </div>
+            </div>
+
+            <!-- Album 4 -->
+            <div class="album-item">
+                <img class="album-image" src="images/0CAPICereals.jpg" alt="Album 4 Image 1">
+                <div class="caption">Conduct of Second Level Training on the Use of Computer Assisted Personal Interview (CAPI) for Cereals Production Surveys conducted on October 9-10, 2023, in Zamboanga City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/0CAPICereals.jpg" alt="Album 4 Image 2">
+                    <img src="images/1CAPICereals.jpg" alt="Album 4 Image 3">
+                    <img src="images/2CAPICereals.jpg" alt="Album 4 Image 4">
+                    <img src="images/3CAPICereals.jpg" alt="Album 4 Image 5">
+                    <img src="images/4CAPICereals.jpg" alt="Album 4 Image 6">
+                </div>
+            </div>
+
+            <div class="album-item">
+                <img class="album-image" src="images/ulaf10.jpg" alt="Album 1 Image 1">
+                <div class="caption">Second and Third Level Training on the 2023 Updating of List of Aquaculture Farms (ULAF) conducted on June 19-23, 2023, in Zamboanga City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/ulaf10.jpg" alt="Album 1 Image 2">
+                    <img src="images/ulaf1.jpg" alt="Album 1 Image 3">
+                    <img src="images/ulaf9.jpg" alt="Album 1 Image 2">
+                    <img src="images/ulaf8.jpg" alt="Album 1 Image 3">
+                    <img src="images/ulaf7.jpg" alt="Album 1 Image 2">
+                    <img src="images/ulaf6.jpg" alt="Album 1 Image 3">
+                    <img src="images/ulaf5.jpg" alt="Album 1 Image 2">
+                    <img src="images/ulaf4.jpg" alt="Album 1 Image 3">
+                    <img src="images/ulaf3.jpg" alt="Album 1 Image 10">
+                    <img src="images/ulaf2.jpg" alt="Album 1 Image 11">
+
+                </div>
+            </div>
+            <!-- Album 5 -->
+            <div class="album-item">
+                <img class="album-image" src="images/41stQtrRDR.jpg" alt="Album 5 Image 1">
+                <div class="caption">First Quarter 2023 Regional Data Review (RDR) on Agricultural Statistics (AgStat) conducted on April 17-20, 2023, in Zamboanga City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/41stQtrRDR.jpg" alt="Album 5 Image 2">
+                    <img src="images/11stQtrRDR.jpg" alt="Album 5 Image 3">
+					<img src="images/21stQtrRDR.jpg" alt="Album 5 Image 2">
+                    <img src="images/31stQtrRDR.jpg" alt="Album 5 Image 3">
+                </div>
+            </div>
+            <!-- Album 3 -->
+            <div class="album-item">
+                <img class="album-image" src="images/cereals1.jpg" alt="Album 3 Image 1">
+                <div class="caption">Conduct of Second Level 2023 Operational Training on Cereals Surveys conducted on March 20-24, 2023, in Pagadian City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/cereals1.jpg" alt="Album 3 Image 1">
+                    <img src="images/2Cereals.jpg" alt="Album 3 Image 2">
+                    <img src="images/1Cereals.jpg" alt="Album 3 Image 3">
+                    <img src="images/cereals2.jpg" alt="Album 3 Image 4">
+
+                </div>
+            </div>
+
+
+
+            <!-- Album 7 -->
+            <div class="album-item">
+                <img class="album-image" src="images/1CrPS2LT.jpg" alt="Album 7 Image 1">
+                <div class="caption">2023 Second Level Operational Training on Crops Production Survey (CrPS) conducted on March 14-16, 2023 in Zamboanga City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/1CrPS2LT.jpg" alt="Album 7 Image 2">
+                    <img src="images/2CrPS2LT.jpg" alt="Album 7 Image 3">
+                    <img src="images/3CrPS2LT.jpg" alt="Album 7 Image 2">
+                    <img src="images/5CrPS2LT.jpg" alt="Album 7 Image 2">
+                    <img src="images/6CrPS2LT.jpg" alt="Album 7 Image 3">
+                    <img src="images/7CrPS2LT.jpg" alt="Album 7 Image 2">
+                </div>
+            </div>
+
+
+            <!-- Album 7 -->
+            <div class="album-item">
+                <img class="album-image" src="images/3LP2ndLT.jpg" alt="Album 7 Image 1">
+                <div class="caption">Conduct of Second Level Operational Training on Livestock and Poultry conducted on February 27 to March 3, 2023 in Dipolog City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/3LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/1LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/2LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/4LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/5LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/6LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/7LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/8LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/9LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/10LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/11LP2ndLT.jpg" alt="Album 7 Image 2">
+                    <img src="images/12LP2ndLT.jpg" alt="Album 7 Image 3">
+                    <img src="images/13LP2ndLT.jpg" alt="Album 7 Image 3">
+                </div>
+            </div>
+
+            <!-- Album 6 -->
+            <div class="album-item">
+                <img class="album-image" src="images/0TFTCrops.jpg" alt="Album 6 Image 1">
+                <div class="caption">Task Force Training for Crops Production Survey conducted February 21-23, 2023 in Pasig City</div>
+                <div class="hidden-images" style="display: none;">
+                    <img src="images/0TFTCrops.jpg" alt="Album 6 Image 2">
+                    <img src="images/1TFTCrops.jpg" alt="Album 6 Image 3">
+					<img src="images/2TFTCrops.jpg" alt="Album 6 Image 2">
+                    <img src="images/3TFTCrops.jpg" alt="Album 6 Image 3">
+					
+                </div>
+            </div>
+
+            <!-- Album 8 -->
+
+            <!-- Album 10 -->
+
+
+            <!-- Add more albums as needed -->
+        </div>
+    </section>
+
+    <!-- Lightbox container (same as before) -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-button" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-image" src="" alt="Lightbox Image">
+    </div>
+
+    <script>
+        // JavaScript for the lightbox (same as before)
+        var lightbox = document.getElementById("lightbox");
+        var lightboxImage = document.getElementById("lightbox-image");
+
+        function openLightbox(imageSrc) {
+            lightboxImage.src = imageSrc;
+            lightbox.style.display = "block";
+        }
+
+        function closeLightbox() {
+            lightbox.style.display = "none";
+        }
+
+        // Event listeners for showing hidden images and cycling through them (same as before)
+        var albumItems = document.querySelectorAll(".album-item");
+        albumItems.forEach(function (item) {
+            var hiddenImages = item.querySelector(".hidden-images").children;
+            var currentIndex = 0;
+
+            item.addEventListener("click", function () {
+                openLightbox(hiddenImages[currentIndex].src);
+
+                lightboxImage.onclick = function () {
+                    currentIndex = (currentIndex + 1) % hiddenImages.length;
+                    openLightbox(hiddenImages[currentIndex].src);
+                };
+            });
+        });
+		
+    </script><br><br><br>
+	<center>
+<img src="images/footer1.jpg" width="1900" height="200">
+</center>
+</body>
+</html>
